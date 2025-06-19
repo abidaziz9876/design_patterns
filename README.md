@@ -1,0 +1,1 @@
+this is my design patterns implementation such as singleton, factory etc.
