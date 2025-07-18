@@ -3,8 +3,8 @@ class LoggerChain {
         Logger errorLogger = new ErrorLogger(Logger.ERROR);
         Logger debugLogger = new DebugLogger(Logger.DEBUG);
         Logger infoLogger = new InfoLogger(Logger.INFO);
-        infoLogger.setNextLogger(debugLogger);
-        debugLogger.setNextLogger(errorLogger);
+        debugLogger.setNextLogger(infoLogger);
+        infoLogger.setNextLogger(errorLogger);
         return infoLogger;
     }
 }
