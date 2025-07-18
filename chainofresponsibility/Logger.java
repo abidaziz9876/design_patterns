@@ -10,7 +10,7 @@ abstract class Logger {
     }
     // Handle the logging request
     public void logMessage(int level, String message) {
-        if (this.logLevel <= level) {
+        if (this.logLevel>=level) {
             write(message);
         }
         if (nextLogger != null) {
